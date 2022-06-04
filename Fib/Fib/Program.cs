@@ -6,7 +6,7 @@ namespace Fib
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Fibonachi1(11));
+            Console.WriteLine(Fibonachi2(10));
         }
 
         public static int Fibonachi1(int steps)
@@ -27,6 +27,17 @@ namespace Fib
             }
 
             return current;
+        }
+
+        public static int Fibonachi2(int steps)
+        {
+
+            if (steps == 0)
+                return 0;
+            else if (steps == 1)
+                return 1;
+
+            return Fibonachi2(steps - 1) + Fibonachi2(steps - 2);
         }
     }
 }
